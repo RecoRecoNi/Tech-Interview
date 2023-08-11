@@ -1,7 +1,7 @@
 # 💻Tech-Interview
 
 > 이 Repository는 [VSFE님께서 작성하신 기술 면접 Repository](https://github.com/VSFe/Tech-Interview)를 재구성한 Repository입니다.
-잘못된 정보가 있으면 언제든지 알려주세요!
+> 잘못된 정보가 있으면 언제든지 알려주세요!
      
 <br>    
      
