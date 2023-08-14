@@ -19,6 +19,5 @@ assignees: ''
   </tr>
 </table>
 
-## Insight
-
-스터디를 진행하며 얻은 인사이트를 정리합니다.
+## Question
+질문을 작성해주세요.
