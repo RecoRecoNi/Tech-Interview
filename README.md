@@ -22,19 +22,18 @@
 
 <br>
 
-## Contents
-
-- [Data Structure, Algorithm (이론)](https://github.com/RecoRecoNi/Tech-Interview/blob/main/01-DATA_STRUCTURE_ALGORITHM.md)
-- [Operating System](https://github.com/RecoRecoNi/Tech-Interview/blob/main/02-OPERATING_SYSTEM.md)
-- [Network](https://github.com/RecoRecoNi/Tech-Interview/blob/main/03-NETWORK.md)
-- [Database](https://github.com/RecoRecoNi/Tech-Interview/blob/main/04-DATABASE.md)
-- [Etc](https://github.com/RecoRecoNi/Tech-Interview/blob/main/05-ETC.md)
-- [손코딩 (연습 문항)](https://github.com/RecoRecoNi/Tech-Interview/blob/main/06-ALGORITHM.md)
-- [언어/프레임워크 관련 질문 (Python)](https://github.com/RecoRecoNi/Tech-Interview/blob/main/07-Python.md)
+## 📚 Contents
+### [01. Data Structure, Algorithm (이론)](https://github.com/RecoRecoNi/Tech-Interview/blob/main/01-DATA_STRUCTURE_ALGORITHM/README.md)
+### [02. Operating System](https://github.com/RecoRecoNi/Tech-Interview/tree/main/02-OPERATING_SYSTEM/README.md)
+### [03. Network](https://github.com/RecoRecoNi/Tech-Interview/tree/main/03-NETWORK/README.md)
+### [04. Database](https://github.com/RecoRecoNi/Tech-Interview/blob/main/04-DATABASE/README.md)
+### [05. Etc](https://github.com/RecoRecoNi/Tech-Interview/blob/main/05-ETC/README.md)
+### [06. 손코딩 (연습 문항)](https://github.com/RecoRecoNi/Tech-Interview/blob/main/06-ALGORITHM/README.md)
+### [07. 언어/프레임워크 관련 질문 (Python)](https://github.com/RecoRecoNi/Tech-Interview/blob/main/07-PYTHON/README.md)
 
 <br>
       
-## Author
+## 😆 Author
 |<img src="https://avatars.githubusercontent.com/u/70088803?v=4" width="200" height="200">|<img src="https://avatars.githubusercontent.com/u/72483874?v=4" width="200" height="200">|<img src="https://avatars.githubusercontent.com/u/63551948?v=4" width="200" height="200">|
 |:-:|:-:|:-:|
 |[Sumin](https://github.com/ksumini)|[Jisu](https://github.com/zsmalla)|[Wooyeol](https://github.com/Woo-Yeol)|
