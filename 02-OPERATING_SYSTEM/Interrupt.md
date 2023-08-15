@@ -97,3 +97,8 @@
   - **프로그램 검사(Program Check)**
   - **SVC(SuperVisor Call)**
 - 일반적으로 하드웨어 인터럽트가 소프트웨어 인터럽트보다 우선 순위가 높고 내부 인터럽트 보다 외부 인터럽트가 우선 순위가 높습니다. **(하드웨어 인터럽트 > 소프트웨어 인터럽트) , (외부 인터럽트 > 내부 인터럽트)**
+
+## REFERENCE
+
+- [유튜브 - 인터럽트와 시스템 콜을 설명합니다! 당연히 유저 모드, 커널 모드도 설명해야겠죠? 그런데 이 모든게 프로그래밍 언어와 무슨 상관이냐구요?? 상관있죠! 왜 상관있냐면요..!](https://www.youtube.com/watch?v=v30ilCpITnY)
+- [Wikipedia - 인터럽트](https://ko.wikipedia.org/wiki/%EC%9D%B8%ED%84%B0%EB%9F%BD%ED%8A%B8)
