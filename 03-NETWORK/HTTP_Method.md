@@ -100,19 +100,20 @@ name : "jihoon"
 # 📚 Reference
 [[HTTP] HTTP 메소드의 멱등성(Idempotence)과 Delete 메소드가 멱등한 이유](https://mangkyu.tistory.com/251)
 
-[벨로그 - HTTP Method란? (GET,POST,PUT,DELETE)]([https://velog.io/@yh20studio/CS-Http-Method-란-GET-POST-PUT-DELETE](https://velog.io/@yh20studio/CS-Http-Method-%EB%9E%80-GET-POST-PUT-DELETE))
+[벨로그 - HTTP Method란? (GET,POST,PUT,DELETE)](https://velog.io/@yh20studio/CS-Http-Method-%EB%9E%80-GET-POST-PUT-DELETE)
 
 [블로그 - HTTP 메소드의 멱등성, 그리고 안전한 메서드](https://hudi.blog/http-method-idempotent/)
 
-[인프런 - 멱등이 잘 이해가 가지 않습니다]([https://www.inflearn.com/questions/275220/멱등이-잘-이해가-가지-않습니다](https://www.inflearn.com/questions/275220/%EB%A9%B1%EB%93%B1%EC%9D%B4-%EC%9E%98-%EC%9D%B4%ED%95%B4%EA%B0%80-%EA%B0%80%EC%A7%80-%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4))
+[인프런 - 멱등이 잘 이해가 가지 않습니다](https://www.inflearn.com/questions/275220/%EB%A9%B1%EB%93%B1%EC%9D%B4-%EC%9E%98-%EC%9D%B4%ED%95%B4%EA%B0%80-%EA%B0%80%EC%A7%80-%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4)
 
-[벨로그 - [HTTP] GET, POST, PUT, PATCH 차이]([https://velog.io/@dyunge_100/Spring-Thread-Pool#13-get과-post의-차이점을-간략히-나타낸-표](https://velog.io/@dyunge_100/Spring-Thread-Pool#13-get%EA%B3%BC-post%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%84-%EA%B0%84%EB%9E%B5%ED%9E%88-%EB%82%98%ED%83%80%EB%82%B8-%ED%91%9C))
+[벨로그 - [HTTP] GET, POST, PUT, PATCH 차이](https://velog.io/@dyunge_100/Spring-Thread-Pool#13-get%EA%B3%BC-post%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%84-%EA%B0%84%EB%9E%B5%ED%9E%88-%EB%82%98%ED%83%80%EB%82%B8-%ED%91%9C)
+
 [깃북 - HTTP METHOD](https://incheol-jung.gitbook.io/docs/q-and-a/computer-science/http-method)
 
 [우피 - 3. HTTP 기본](https://catsbi.oopy.io/5c0b482c-b427-4052-9030-d2be0810eeb6)
 
 [[HTTP] GET vs POST, GET은 body 값을 가지면 안 될까?](https://cl8d.tistory.com/63)
 
-[티스토리 - HTTP 메서드 종류 & 요청 흐름 총 정리]([https://inpa.tistory.com/entry/WEB-🌐-HTTP-메서드-종류-통신-과정-💯-총정리](https://inpa.tistory.com/entry/WEB-%F0%9F%8C%90-HTTP-%EB%A9%94%EC%84%9C%EB%93%9C-%EC%A2%85%EB%A5%98-%ED%86%B5%EC%8B%A0-%EA%B3%BC%EC%A0%95-%F0%9F%92%AF-%EC%B4%9D%EC%A0%95%EB%A6%AC))
+[티스토리 - HTTP 메서드 종류 & 요청 흐름 총 정리](https://inpa.tistory.com/entry/WEB-%F0%9F%8C%90-HTTP-%EB%A9%94%EC%84%9C%EB%93%9C-%EC%A2%85%EB%A5%98-%ED%86%B5%EC%8B%A0-%EA%B3%BC%EC%A0%95-%F0%9F%92%AF-%EC%B4%9D%EC%A0%95%EB%A6%AC)
 
 [brunchstory - HTTP GET 메소드와 body](https://brunch.co.kr/@kd4/158)
