@@ -74,7 +74,7 @@
 
 ### MySQL에서 PK를 명시적으로 정의하지 않아도, PK를 설정하게 하는 방법에는 어떤 것이 있을까요?
 
-- MySQL의 경우 명시적으로 Primary Key를 지정하지 않으면 내부적으로 사용자에게 노출하지 않는 기본키(**Generated Invisible Primary Key, GIPK)**를 생성해 활용합니다.
+- MySQL의 경우 명시적으로 Primary Key를 지정하지 않으면 내부적으로 사용자에게 노출하지 않는 기본키(**Generated Invisible Primary Key, GIPK**) 를 생성해 활용합니다.
 - 기본키가 아니더라도 UNIQUE 제약을 만족하는 모든 Column을 찾아서 기본 키의 역할을 수행하게 할 수 있습니다.
 
 ### 유일성, 최소성에 대해서 설명해주세요
