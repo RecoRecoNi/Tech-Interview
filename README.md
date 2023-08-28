@@ -19,16 +19,24 @@
       - 결석 인정되는 상황 : `조사` , `면접` , `병원(미용X)` , `다른 분들의 동의를 받았을 때(2👌)`
 - ### 그 외 주의 사항
   - 전날 과도한 음주, 밤샘 금지
-- ### [Document Convention](https://zsmalla.notion.site/CS-Study-56284a3418534180a2b43a41ec450adc?pvs=4)
-  1. **이슈 남기기** : `[디렉토리명에 있는 숫자] 문제 키워드`
-  2. **파일 이름** : `문제키워드.md`
-  3. **커밋 메시지** : `docs : 내용`
-       - ex) docs : add System Call.md
-  4. **PR** : `[스터디 날짜] 문제 키워드`
-       - `document` 레이블 추가
-  5. **문체** : 존댓말 형식으로 설명하듯이
-  6. **레퍼런스 표기** : `[플랫폼 이름 - 타이틀](링크)` <br>
-     ex) [Wikipedia - 시스템 호출](https://ko.wikipedia.org/wiki/시스템_호출)
+- ### [Document Convention](https://www.notion.so/zsmalla/Convetion-b4bf03212c5648828b4db7e294b6be4e)
+     1\. **이슈 남기기** : `[디렉토리명에 있는 숫자] 문제 키워드`
+  
+     2\. **파일 이름** : `문제키워드.md` - 스페이스 사용
+        - ex) System Call.md
+  
+     3\. **[.md 파일 양식](https://github.com/RecoRecoNi/Tech-Interview/blob/main/sample.md)**
+  
+     4\. **커밋 메시지** : `docs : 내용`
+        - ex) docs : add System Call.md
+  
+     5\. **PR** : `[스터디 날짜] 문제 키워드`
+        - `document` 레이블 추가
+  
+     6\. **문체** : 존댓말 형식으로 설명하듯이
+  
+     7\. **레퍼런스 표기** : `[플랫폼 이름 - 타이틀](링크)` <br>
+          ex) [Wikipedia - 시스템 호출](https://ko.wikipedia.org/wiki/시스템_호출)
 
 <br>
 
