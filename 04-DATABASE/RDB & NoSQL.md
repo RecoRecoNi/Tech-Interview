@@ -108,7 +108,7 @@ RDB의 정규화된 `스키마`, `ACID 트랜잭션`, `Scalability` 등이 NoSQL
 
 [티스토리 - RDBMS의 한계와 NoSQL을 사용하는 이유 (3) NoSQL 장단점, 특징](https://sujl95.tistory.com/83)
 
-[깃허브 - <데이터베이스> 관계형 vs. NoSQL 언제 무엇을 써야할까?](<[https://ud803.github.io/데이터베이스/2021/11/16/RDB-vs.-NoSQL-언제-누구를-써야할까/](https://ud803.github.io/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/2021/11/16/RDB-vs.-NoSQL-%EC%96%B8%EC%A0%9C-%EB%88%84%EA%B5%AC%EB%A5%BC-%EC%8D%A8%EC%95%BC%ED%95%A0%EA%B9%8C/)>)
+[깃허브 - <데이터베이스> 관계형 vs. NoSQL 언제 무엇을 써야할까?](https://ud803.github.io/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/2021/11/16/RDB-vs.-NoSQL-%EC%96%B8%EC%A0%9C-%EB%88%84%EA%B5%AC%EB%A5%BC-%EC%8D%A8%EC%95%BC%ED%95%A0%EA%B9%8C/)
 
 [깃허브 - SQL과 NOSQL의 차이](https://gyoogle.dev/blog/computer-science/data-base/SQL%20&%20NOSQL.html)
 
@@ -118,4 +118,4 @@ RDB의 정규화된 `스키마`, `ACID 트랜잭션`, `Scalability` 등이 NoSQL
 
 [미디엄 - Differences Between SQL And NoSQL: Is NoSQL Faster Than SQL?](https://dmai287.medium.com/differences-between-sql-and-nosql-525a0796b901)
 
-[미디엄 - [Elastic Search] 기본 개념과 특징(장단점)](<[https://jaemunbro.medium.com/elastic-search-기초-스터디-ff01870094f0](https://jaemunbro.medium.com/elastic-search-%EA%B8%B0%EC%B4%88-%EC%8A%A4%ED%84%B0%EB%94%94-ff01870094f0)>)
+[미디엄 - [Elastic Search] 기본 개념과 특징(장단점)](https://jaemunbro.medium.com/elastic-search-%EA%B8%B0%EC%B4%88-%EC%8A%A4%ED%84%B0%EB%94%94-ff01870094f0)
