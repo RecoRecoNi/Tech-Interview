@@ -21,7 +21,7 @@
     static int x = 0; // 정적 변수
     x++;
     std::cout << "x: " << x << std::endl;
-}
+}   
 
 int main() {
     myFunction(); // x: 1
