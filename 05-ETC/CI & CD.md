@@ -34,5 +34,5 @@ CI/CD는 애플리케이션 개발 단계를 자동화하여 애플리케이션�
 
 ## 📚 Reference
 
-[RedHat - CI/CD(Continuous Integration / Continuous Delivery)란?](https://www.redhat.com/ko/topics/devops/what-is-ci-cd)
+[RedHat - CI/CD(Continuous Integration / Continuous Delivery)란?](https://www.redhat.com/ko/topics/devops/what-is-ci-cd)  
 [티스토리 - CI/CD란 무엇인가 (Feat. DevOps 엔지니어)](https://artist-developer.tistory.com/24)
