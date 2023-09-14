@@ -23,8 +23,8 @@ def bubble_sort(array: List[int]) -> None:  # 제자리 정렬
 
 <p align="center"><img src="./images/selection.gif" align="center" style="margin-right: 50;" width="45%"></p>
 
-- 선택 정렬은 배열에서 작은 데이터를 선별하여서 데이터를 앞으로 보내는 정렬의 일종이다. 효율성이 낮습니다.
-- 시간복잡도: $O(N^2)$ worst,average,best 모두 동일
+- 선택 정렬은 배열에서 작은 데이터를 선별하여서 데이터를 앞으로 보내는 정렬의 일종으로 효율성이 낮습니다.
+- 시간복잡도: $O(N^2)$ 로, worst,average,best 모두 동일합니다.
 
 ```python
 def selection_sort(arr:List[int]) -> None:
@@ -43,7 +43,6 @@ def selection_sort(arr:List[int]) -> None:
 
 - 삽입 정렬은 자료 배열의 모든 요소를 앞에서부터 차례대로 이미 정렬된 배열 부분과 비교하여, 자신의 위치를 찾아 삽입함으로써 정렬을 완성하는 알고리즘입니다.
 - 시간복잡도: $O(N^2)$:worst,average, $O(N)$: 이미 정렬되어 있다면 best
--
 
 ```python
 def insertion_sort(array: List[int]) -> None:
@@ -52,6 +51,8 @@ def insertion_sort(array: List[int]) -> None:
             if array[i - 1] > array[i]:
                 array[i - 1], array[i] = array[i], array[i - 1]
 ```
+
+_for문을 사용한 code_
 
 ```python
 def insertion_sort(array: List[int]) -> None:   # 제자리 정렬
@@ -66,12 +67,16 @@ def insertion_sort(array: List[int]) -> None:   # 제자리 정렬
         array[j+1] = key                    # 찾은 위치에는 기억한 key 삽입
 ```
 
+_while문을 사용한 code_
+
 ### 퀵 정렬(Quick Sort)
 
 <p align="center"><img src="./images/quick.gif" align="center" style="margin-right: 50;" width="45%"></p>
 
 - 데이터 집합내에 임의의 기준(pivot)값을 정하고 해당 피벗으로 집합을 기준으로 두개의 부분 집합으로 나눈 후 한쪽 부분에는 피벗값보다 작은값들만, 다른 한쪽은 큰값들만 넣습니다. 더 이상 쪼갤 부분 집합이 없을 때까지 각각의 부분 집합에 대해 피벗/쪼개기 재귀적으로 적용합니다.
-- 시간복잡도: $O(NlogN)$: average, best, $O(N^2)$: worst
+- 시간복잡도
+  - average, best : $O(NlogN)$
+  - worst : $O(N^2)$
 
 ```python
 def quick_sort(array: List[int]) -> None:
@@ -301,6 +306,8 @@ def radix_sort(arr):
         placement *= RADIX
 ```
 
+_버킷을 사용하여 구현_
+
 ```python
 def counting_sort(arr, exp):
     n = len(arr)
@@ -332,6 +339,8 @@ def radix_sort(arr):
         counting_sort(arr, exp)
         exp *= 10
 ```
+
+_계수 정렬을 사용하여 구현_
 
 <p align="center"><img src="./images/sort_summary.png" align="center" style="margin-right: 50;" width="45%"></p>
 
