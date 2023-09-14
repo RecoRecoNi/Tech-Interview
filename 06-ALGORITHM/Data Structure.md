@@ -228,126 +228,7 @@ class ArrayQueue:
   <summary>추상적 자료구조 구현 표현</summary>
   
 ```python
-# 연결 리스트(linked list)를 이용해 구현 - 양방향 연결 리스트 이용
-class Node:
-
-    def __init__(self, item):
-        self.data = item
-        self.prev = None
-        self.next = None
-
-
-class DoublyLinkedList:
-
-    def __init__(self):
-        self.nodeCount = 0
-        self.head = Node(None)
-        self.tail = Node(None)
-        self.head.prev = None
-        self.head.next = self.tail
-        self.tail.prev = self.head
-        self.tail.next = None
-
-
-    def __repr__(self):
-        if self.nodeCount == 0:
-            return 'LinkedList: empty'
-
-        s = ''
-        curr = self.head
-        while curr.next.next:
-            curr = curr.next
-            s += repr(curr.data)
-            if curr.next.next is not None:
-                s += ' -> '
-        return s
-
-
-    def getLength(self):
-        return self.nodeCount
-
-
-    def traverse(self):
-        result = []
-        curr = self.head
-        while curr.next.next:
-            curr = curr.next
-            result.append(curr.data)
-        return result
-
-
-    def reverse(self):
-        result = []
-        curr = self.tail
-        while curr.prev.prev:
-            curr = curr.prev
-            result.append(curr.data)
-        return result
-
-
-    def getAt(self, pos):
-        if pos < 0 or pos > self.nodeCount:
-            return None
-
-        if pos > self.nodeCount // 2:
-            i = 0
-            curr = self.tail
-            while i < self.nodeCount - pos + 1:
-                curr = curr.prev
-                i += 1
-        else:
-            i = 0
-            curr = self.head
-            while i < pos:
-                curr = curr.next
-                i += 1
-
-        return curr
-
-
-    def insertAfter(self, prev, newNode):
-        next = prev.next
-        newNode.prev = prev
-        newNode.next = next
-        prev.next = newNode
-        next.prev = newNode
-        self.nodeCount += 1
-        return True
-
-
-    def insertAt(self, pos, newNode):
-        if pos < 1 or pos > self.nodeCount + 1:
-            return False
-
-        prev = self.getAt(pos - 1)
-        return self.insertAfter(prev, newNode)
-
-
-    def popAfter(self, prev):
-        curr = prev.next
-        next = curr.next
-        prev.next = next
-        next.prev = prev
-        self.nodeCount -= 1
-        return curr.data
-
-
-    def popAt(self, pos):
-        if pos < 1 or pos > self.nodeCount:
-            raise IndexError('Index out of range')
-
-        prev = self.getAt(pos - 1)
-        return self.popAfter(prev)
-
-
-    def concat(self, L):
-        self.tail.prev.next = L.head.next
-        L.head.next.prev = self.tail.prev
-        self.tail = L.tail
-
-        self.nodeCount += L.nodeCount
-
-
+# 양방향 연결 리스트를 이용해 큐 구현
 class LinkedListQueue:
 
     def __init__(self):
@@ -375,76 +256,52 @@ class LinkedListQueue:
   <summary> Circular Queue </summary>
   
 ```python
-MAX_QSIZE = 10
-class CircularQueue :
-    def __init__(self):
-        self.front = 0
-        self.rear = 0
-        self.items = [None] * MAX_QSIZE
+class CircularQueue:
+
+    def __init__(self, n):
+        self.maxCount = n 
+        self.data = [None] * n # 빈 큐를 초기화(인자로 주어진 최대 큐 길이)
+        self.count = 0
+        self.front = -1
+        self.rear = -1
+
+    def size(self):
+        return self.count
 
     def isEmpty(self):
-        return self.front == self.rear
+        return self.count == 0
 
     def isFull(self):
-        return self.front == (self.rear+1)%MAX_QSIZE
+        return self.count == self.maxCount
 
-    def clear(self):
-        self.front = self.rear
-    
-    def __len__(self):
-        return (self.rear - self.front + MAX_QSIZE) % MAX_QSIZE
-    
-    def enqueue(self, item):
-        if not self.isFull():
-            self.rear = (self.rear + 1) % MAX_QSIZE
-            self.items[self.rear] = item
-    
-    def dequeue(self):
-        if not self.isEmpty():
-            self.front = (self.front+1) % MAX_QSIZE
-            return self.items[self.front]
+    def enqueue(self, item): # 큐에 데이터 원소 추가
+        if self.isFull(): # 더 이상 데이터를 추가할 수 없음
+            raise IndexError('Queue full')
+        self.rear = (self.rear + 1) % self.maxCount
+        self.data[self.rear] = item
+        self.count += 1
 
+    def dequeue(self): # 큐에서 데이터 원소 뽑아내기
+        if self.isEmpty():
+            raise IndexError('Queue empty')
+        self.front = (self.front+1) % self.maxCount
+        x = self.data[self.front]
+        self.count -= 1
+        return x
 
-    def peek(self):
-        if not self.isEmpty():
-            return self.items[(self.front+1)%MAX_QSIZE]
-    
+    def peek(self): # 큐의 맨 앞 원소 들여다보기
+        if self.isEmpty():
+            raise IndexError('Queue empty')
+        return self.data[(self.front+1) % self.maxCount]
+        
+
     def print(self):
         out = []
         if self.front < self.rear:
-            out = self.items[self.front+1:self.rear+1]
+            out = self.data[self.front+1:self.rear+1]
         else:
-            out = self.items[self.front+1:MAX_QSIZE] + self.items[0:self.rear+1]
-
-        print("[f=%s, r=%d] ==> "%(self.front, self.rear), out)
-
-class CircularDeque(CircularQueue):
-    
-    def __init__(self):
-        super().__init__()
-
-    def addRear (self, item):
-        self.enqueue(item)
-
-    def deleteFront (self):
-        return self.dequeue()
-    
-    def getFront(self):
-        return self.peek()
-
-    def addFront(self, item):
-        if not self.isFull():
-            self.items[self.front] = item
-            self.front = (self.front - 1 + MAX_QSIZE) % MAX_QSIZE
-
-    def deleteRear(self):
-        if not self.isEmpty():
-            item = self.items[self.rear]
-            self.rear = (self.rear - 1 + MAX_QSIZE) % MAX_QSIZE
-            return item
-
-    def getRear(self):
-        return self.items[self.rear]
+            out = self.data[self.front+1:self.maxCount] + self.data[0:self.rear+1]
+        print(out)
 ```
 </details>
 <details>
@@ -500,13 +357,13 @@ class ArrayDeque:
         if self.head == self.tail: # 덱이 비어있음
             return -1
         self.head += 1
-        return dat[self.head-1] # 여기서 굳이 제거해 줄 필요가 없는 이유는 이후에 다른 원소로 채워지게 되면 덮어씌우면 되기 때문
+        return self.dat[self.head-1] # 여기서 굳이 제거해 줄 필요가 없는 이유는 이후에 다른 원소로 채워지게 되면 덮어씌우면 되기 때문
 
     def pop_back(self): # 덱의 가장 뒤에 있는 원소를 제거, 반환
-        if self.head == self.tail:
-            return -1
+        if self.isEmpty(self):
+            return IndexError('Empty Deque')
         self.tail -= 1
-        return dat[self.tail+1]
+        return self.dat[self.tail+1]
     
     def size(self): # 덱의 원소의 개수를 반환
         return self.tail - self.head
@@ -530,16 +387,14 @@ class ArrayDeque:
 class Node:
     def __init__(self, item):
         self.data = item
-        self.prev = None
         self.next = None
 
 class LinkedList:
-    def __init__(self):
+    def __init__(self): # 비어 있는 연결 리스트
         self.nodeCount = 0
-        self.head = Node(None)
+        self.head = None
         self.tail = None
-        self.head.next = self.tail
-    
+
     # 리스트 출력
     def __repr__(self):
         if self.nodeCount == 0:
@@ -559,72 +414,81 @@ class LinkedList:
     
     # 리스트 순회
     def traverse(self):
-        result = []
+        traversal = []
+
         curr = self.head
-        while curr.next:
+        while curr != None: # tail에 도달하면 종료
+            traversal.append(curr.data)
             curr = curr.next
-            result.append(curr.data)
-        return result
+        
+        return traversal
     
     # 특정 원소 참조
-    def getAt(self, pos): # getAt(0) -> head
-        if pos < 0 or pos > self.nodeCount:
+    def getAt(self, pos):
+        if pos <= 0 or pos > self.nodeCount:
             return None
-        i = 0
+        i = 1
         curr = self.head
         while i < pos:
             curr = curr.next
             i += 1
         return curr
-    
+
     # 원소의 삽입
-    def insertAfter(self, prev, newNode): # prev가 가리키는 node의 다음에 newNode를 삽입하고 성공/실패에 따라 True/False를 리턴
-        newNode.next = prev.next
-        if prev.next is None: # tail
+    def insertAt(self, pos, newNode):
+        # 1 <= pos <= nodeCount+1, pos가 가리키는 위치에 newNode를 삽입하고, 성공/실패에 따라 True/False를 리턴
+        if pos < 1 or pos > self.nodeCount + 1:
+            return False
+        
+        if pos == 1: # 삽입하려는 위치가 맨 앞일 때
+            newNode.next = self.head
+            self.head = newNode
+        else:
+            if pos == self.nodeCount + 1: # 맨 끝에 삽입하려는 경우 앞에서부터 순차적으로 찾아갈 필요가 없음
+                prev = self.tail
+            else:
+                prev = self.getAt(pos-1) # newNode가 삽입될 위치
+            newNode.next = prev.next
+            prev.next = newNode
+        
+        if pos == self.nodeCount + 1: # 삽입하려는 위치가 맨 뒤일 때, tail 갱신
             self.tail = newNode
-        prev.next = newNode
+            
         self.nodeCount += 1
         return True
     
-    def insertAt(self, pos, newNode): # 1 <= pos <= nodeCount+1, pos가 가리키는 위치에 newNode를 삽입하고, 성공/실패에 따라 True/False를 리턴
-        # (1) pos범위 조건 확인
-        # (2) pos == 1인 경우에는 head뒤에 새 node 삽입
-        # (3) pos == nodeCount + 1인 경우는 prev <- tail
-        # (4) 그렇지 않은 경우에는 prev <- getAt(…)
-        if pos < 1 or pos > self.nodeCount + 1:
-            return False
-        if pos != 1 and pos == self.nodeCount + 1: # pos가 1이면서 nodeCount+1과 같으면 빈 리스트에 노드를 삽입하는 경우
-            prev = self.tail
-        else: 
-            prev = self.getAt(pos-1) # newNode가 삽입될 위치
-        return self.insertAfter(prev, newNode)
-    
     # 원소의 삭제
-    def popAfter(self, prev): # prev의 다음 node를 삭제하고, 그 node의 data를 리턴
-        if prev: # prev가 마지막 node일 때
-            return None
-        curr = prev.next
-        prev.next = curr.next
-        if curr.next is None:
-            self.tail = prev
-        self.nodeCount -= 1
-        return curr.data
-    
     def popAt(self, pos):
+        # 1 <= pos <= nodeCount, pos가 가리키는 위치의 node를 삭제하고, 그 node의 데이터를 리턴
         if pos < 1 or pos > self.nodeCount:
             raise IndexError
-        prev = self.getAt(pos-1)
-        return self.popAfter(prev)
         
+        if pos == 1: # 삭제하려는 node가 맨 앞일 때
+            curr = self.head
+            self.head = curr.next
+            if self.nodeCount == 1: # 유일한 노드인 경우
+                self.tail = None
+        else:
+            prev = self.getAt(pos-1)
+            curr = prev.next
+            prev.next = curr.next
+            if pos == self.nodeCount: # 삭제하려는 node가 맨 끝일 때
+                self.tail = prev
+                
+        self.nodeCount -= 1
+        return curr.data
+            
+    
+    # 두 리스트의 연결(합치기)
     def concat(self, L):
-        self.tail.next = L.head.next
+        self.tail.next = L.head
         if L.tail:
             self.tail = L.tail
         self.nodeCount += L.nodeCount
 ```
 </br>
 
-**6) Linked List**
+**6) Doubly Linked List**
 ```python
 class Node:
     def __init__(self, item):
@@ -915,7 +779,7 @@ class BinarySearchTree(object):
             if node.left and node.right: # 삭제할 노드가 왼쪽, 오른쪽 자식 노드를 가지고 있을 경우
                 # replace the node to the leftmost of node.right
                 parent, child = node, node.right
-                while child.left is not None: # 삭제할 노드의 오른쪽 노드 중 왼쪽 노드의 가장 작은 값
+                while child.left is not None: # 삭제할 노드의 오른쪽 서브트리 중 가장 작은 값
                     parent, child = child, child.left
                 child.left = node.left
                 if parent != node:
@@ -924,7 +788,7 @@ class BinarySearchTree(object):
                 node = child
             elif node.left or node.right: # 삭제할 노드가 왼쪽 or 오른쪽 노드 중 하나를 가지고 있는 경우
                 node = node.left or node.right
-            else:
+            else: # 자식 노드가 없는 경우 그냥 삭제 해도 된다.
                 node = None
         elif key < node.data:
             node.left, deleted = self._delete_value(node.left, key)
