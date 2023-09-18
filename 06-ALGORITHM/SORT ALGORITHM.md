@@ -8,7 +8,7 @@
 
 - 인접한 두 원소를 비교하여 필요 시 위치를 교환하는 과정을 N번 반복합니다.
 - 구현은 쉽지만 효율성이 매우 낮다고 알려져 있습니다.
-- 시간복잡도는 $O(N^2)$ 로, worst,average,best case 모두 동일합니다.
+- 시간복잡도는 worst,average: $O(N^2)$ , $O(N)$ : 이미 정렬되어 있다면 best
 
 ```python
 def bubble_sort(array: List[int]) -> None:  # 제자리 정렬
@@ -42,7 +42,7 @@ def selection_sort(arr:List[int]) -> None:
 <p align="center"><img src="./images/insertion.gif" align="center" style="margin-right: 50;" width="45%"></p>
 
 - 삽입 정렬은 자료 배열의 모든 요소를 앞에서부터 차례대로 이미 정렬된 배열 부분과 비교하여, 자신의 위치를 찾아 삽입함으로써 정렬을 완성하는 알고리즘입니다.
-- 시간복잡도: $O(N^2)$:worst,average, $O(N)$: 이미 정렬되어 있다면 best
+- 시간복잡도: $O(N^2)$:worst,average, $O(N)$ : 이미 정렬되어 있다면 best
 
 ```python
 def insertion_sort(array: List[int]) -> None:
@@ -360,8 +360,6 @@ _계수 정렬을 사용하여 구현_
 
 ### Tim Sort는 왜 Insertion Sort와 Merge Sort를 결합했을까?
 
-<p align="center"><img src="./images/sort_table.png" align="center" style="margin-right: 50;" width="45%"></p>
-
 <br>
 
 Tim sort는 Merge sort를 기반으로 하되, 좀 더 효율적으로 run을 나누고 제각기 다른 크기를 가진 run을 최대한 효율적인 방법으로 병합하며 실생활 데이터의 특성을 이용하여 여러 가지 최적화 기법을 도입한 정렬 알고리즘입니다.
@@ -372,7 +370,7 @@ Tim sort는 Merge sort를 기반으로 하되, 좀 더 효율적으로 run을 �
 
 ## 📚 Reference
 
-[네이버 블로그 - Tim sort에 대해 알아보자](https://d2.naver.com/helloworld/0315536)
+[네이버 태크 블로그 - Tim sort에 대해 알아보자](https://d2.naver.com/helloworld/0315536)
 
 [티스토리 - 정렬 알고리즘의 선택과 종류 7가지](https://hyo-ue4study.tistory.com/68)
 
