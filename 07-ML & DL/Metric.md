@@ -170,42 +170,34 @@ $$
   - nDCG Formula
 
     1. `Cumulative Gain` : 상위 K개 아이템에대하여 관련도를 합한 것 순서에 따라 Discount하지 않고 동일하게 더한 값
-       $$
-       CG_K = \Sigma_{i=1}^Krel_i
-       $$
+
+       - $CG_K = \Sigma_{i=1}^Krel_i$
+
     2. `Ideal DCG` : 이상적인 추천이 일어났을 때의 DCG값 가능한 DCG 값 중에 제일 크다
 
-       $$
-       IDCG = \Sigma_{i=1}^{K}\frac{rel^{opt}_i}{log_2(i+1)}
-       $$
+       - $IDCG = \Sigma_{i=1}^{K}\frac{rel^{opt}_i}{log_2(i+1)}$
 
     3. `Discounted Cumulative Gain` : 순서에 따라 Cumulative Gain을 Discount함
 
-       $$
-       DCG_K = \Sigma_{i=1}^K\frac{rel_i}{log_2(i+1)}
-       $$
+       - $DCG_K = \Sigma_{i=1}^K\frac{rel_i}{log_2(i+1)}$
 
     4. `Normalized DCG` : 추천 결과에 따라 구해진 DCG를 IDCG로 나눈 값
-       $$
-       NDCG = \frac{DCG}{IDCG}
-       $$
+       - $NDCG = \frac{DCG}{IDCG}$
 
     - **추천 순서까지 고려했을때**의 이상적인 추천에 대한 추천 결과의 비율
 
-  - NDCG 예제
-    NDCG@5 구하기
-    Ideal Order : [C(3), A(3), B(2), E(2), D(1)]
-    `→ Relevance의 내림차순으로 정렬하여 추천 하는 것이 이상적`입니다
-    Recommend Order : [E, A, C, D, B]
-    $$
-    DCG@5 = \frac{2}{log_2(1+1)} +\frac{3}{log_2(2+1)}+\frac{3}{log_2(3+1)}+\frac{1}{log_2(4+1)}+\frac{2}{log_2(5+1)}=6.64
-    $$
-    $$
-    IDCG@5=\frac{3}{log_2(1+1)} + \frac{3}{log_2(2+1)} + \frac{2}{log_2(3+1)} + \frac{2}{log_2(4+1)} + \frac{1}{log_2(5+1)} = 7.14
-    $$
-    $$
-    NDCG@5 = \frac{DCG}{IDCG} = \frac{6.64}{7.14} = 0.93
-    $$
+- NDCG 예제
+  NDCG@5 구하기
+
+  - Ideal Order : [C(3), A(3), B(2), E(2), D(1)]
+  - `→ Relevance의 내림차순으로 정렬하여 추천 하는 것이 이상적`입니다
+  - Recommend Order : [E, A, C, D, B]
+
+  - $DCG@5 = \frac{2}{log_2(1+1)} +\frac{3}{log_2(2+1)}+\frac{3}{log_2(3+1)}+\frac{1}{log_2(4+1)}+\frac{2}{log_2(5+1)}=6.64$
+
+  - $IDCG@5=\frac{3}{log_2(1+1)} + \frac{3}{log_2(2+1)} + \frac{2}{log_2(3+1)} + \frac{2}{log_2(4+1)} + \frac{1}{log_2(5+1)} = 7.14$
+
+  - $NDCG@5 = \frac{DCG}{IDCG} = \frac{6.64}{7.14} = 0.93$
 
 3. Online Test
    Online A/B Test란?
