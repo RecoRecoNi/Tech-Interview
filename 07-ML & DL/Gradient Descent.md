@@ -25,16 +25,22 @@ $$\theta^{\text (next\ step)} = \theta-\eta\nabla_\theta LOSS(\theta)$$
 
 ### 비용함수 MSE에 대한 경사하강법을 구현해보세요
 1. 비용함수의 편도함수 구하기
+
 $$\frac {\partial} {\partial \theta_j}MSE(\theta) = \frac {2} {m}\sum^m_{i=1}\left(\theta^T {\bf x}^{(i)}-y^{(i)}\right)x^{(i)}_j$$
+
 2. 비용 함수의 그레디언트 벡터 구하기
+
 $$\nabla_\theta MSE(\theta) = \begin{bmatrix} 
 {\frac {\partial} {\partial\theta_0}MSE(\theta)} \\
 {\frac {\partial} {\partial\theta_1}MSE(\theta)} \\
 \vdots \\
 {\frac {\partial} {\partial\theta_n}MSE(\theta)}
 \end{bmatrix} = \frac {2} {m} {\bf X}^T({\bf X\theta-y})$$
+
 3. 경사하강법 구현하기
+
 $$\theta^{\text (next\ step)} = \theta-\eta\nabla_\theta LOSS(\theta)$$
+
 ```python
 import numpy as np
 X = 2 * np.random.rand(100, 1)
