@@ -49,9 +49,9 @@ $$
 
    - 실제 False인 data 중에서 모델이 True라고 예측한 비율
 
-   $$
-   \text{Fall-out}(FPR)=\frac{FP}{TN+FP}
-   $$
+$$
+\text{Fall-out}(FPR)=\frac{FP}{TN+FP}
+$$
 
    <br>
 
@@ -147,17 +147,13 @@ $$
 
   - `AP@K`
 
-    $$
-    AP@K = \frac{1}{m} \Sigma_{i=1}^{K}Precision@i
-    $$
+    - $AP@K = \frac{1}{m} \Sigma_{i=1}^{K}Precision@i$
 
     - `Precision@1` 부터 `Precision@K` 까지의 평균값
     - Precision@K와 달리, `관련 아이템을 더 높은 순위에 추천`할수록 `점수가 상승함`
 
   - `MAP@K`
-    $$
-    MAP@K = \frac{1}{|U|}\Sigma_{u=1}^{|U|}(AP@K)_u
-    $$
+    - $MAP@K = \frac{1}{|U|}\Sigma_{u=1}^{|U|}(AP@K)_u$
     - 모든 유저에 대한 Average Precision 값의 평균
 
 - Normalized Discounted Cumulative Gain(NDCG)
