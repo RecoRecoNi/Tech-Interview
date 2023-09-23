@@ -19,8 +19,8 @@ $$\theta^{\text (next\ step)} = \theta-\eta\nabla_\theta LOSS(\theta)$$
 
 ## 📑 꼬리질문
 ### Local Minima 문제에도, Gradient Descent가 사용될 수 있는 이유는 무엇인가요?
-- 연구에 따르면 Local Minima 문제는 고차원에서 모든 weight들이 모두 Local Minima에 동시에 빠지는 경우는 거의 드물기 때문에 일어나기 힘듭니다.
-- 또한, Momentum, RMSProp, Adam등의 개선된 Optimizer는 Local Minima를 피하기 위한 수단을 제공합니다.
+- [논문](https://proceedings.neurips.cc/paper_files/paper/2014/hash/17e23e50bedc63b4095e3d8204ce063b-Abstract.html)에 따르면, 고차원에서 weight의 모든 요소가 local minima에 빠지는 경우는 거의 발생하지 않기 때문에 local minima 문제는 사실상 고차원 발생하기 매우 희귀한 경우라고 주장합니다. 또한, local minima가 발생한다 해도 이는 사실 global minimum이거나 global minimum과 유사한 값을 가지게 되어 문제가 없는 경우가 많습니다.
+- Momentum, RMSProp, Adam등의 개선된 Optimizer는 Local Minima를 피하기 위한 수단을 제공합니다.
     <p align="center"><img src="./images/optimizer.png" align="center" width="100%"></p>
 
 ### 비용함수 MSE에 대한 경사하강법을 구현해보세요
