@@ -1,7 +1,7 @@
 ## ML & DL
 
 <details>
-  <summary><h3>1. 사용한 Metric과 Metric 선정 이유를 설명하시오</h3></summary>
+  <summary><h3>1. Metric에 어떤 것들이 있는지 설명해주세요.</h3></summary>
 </details>
 
 <details>
