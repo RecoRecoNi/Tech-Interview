@@ -8,8 +8,8 @@
 ## 📢 Rules
 - ### 진행 방식
   - 매주 __화요일, 목요일 12시 30분 ~ 16시 스터디__ 를 진행합니다.
-  - 화요일 : 면접식으로 진행(오프라인)
-  - 목요일 : 주제 발표 및 취합(온라인) - 보초님 면접질문 + 꼬꼬무
+  - 화요일 : 주제 발표 및 취합(온라인) - 보초님 면접질문 + 꼬꼬무
+  - 목요일 : 면접식으로 진행(온라인) 
     - 각각 맡은 주제에 대해 .md 파일을 PR하면 본인을 제외한 팀원들이 review를 진행합니다. 
 
 - ### 지각/결석
@@ -47,7 +47,7 @@
 ### [04. Database](https://github.com/RecoRecoNi/Tech-Interview/blob/main/04-DATABASE/README.md)
 ### [05. Etc](https://github.com/RecoRecoNi/Tech-Interview/blob/main/05-ETC/README.md)
 ### [06. 손코딩 (연습 문항)](https://github.com/RecoRecoNi/Tech-Interview/blob/main/06-ALGORITHM/README.md)
-### [07. 언어/프레임워크 관련 질문 (Python)](https://github.com/RecoRecoNi/Tech-Interview/blob/main/07-PYTHON/README.md)
+### [07. ML & DL](https://github.com/RecoRecoNi/Tech-Interview/blob/main/07-ML%20%26%20DL/README.md)
 
 <br>
       
